@@ -1,26 +1,29 @@
-import { useState } from 'react'
+import Hero from './components/Hero'
+import Mentorship from './components/Mentorship'
+import Services from './components/Services'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
+    <div className="min-h-screen text-gray-900 bg-white">
+      <Hero />
+      <Mentorship />
+      <Services />
+      <Contact />
+
+      <footer className="px-6 lg:px-12 py-10 border-t border-gray-100 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p className="text-lg font-semibold">dreamlyf overseas</p>
+            <p className="text-sm text-gray-600">Study abroad consultancy with alumni-led mentorship. Mumbai, India.</p>
+          </div>
+          <div className="text-sm text-gray-600">
+            <a href="https://dreamlyf.co.in" target="_blank" rel="noreferrer" className="hover:underline">dreamlyf.co.in</a>
+            <span className="mx-2">•</span>
+            <a href="#contact" className="hover:underline">Contact</a>
+          </div>
         </div>
-      </div>
+      </footer>
     </div>
   )
 }
